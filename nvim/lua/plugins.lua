@@ -1,12 +1,13 @@
 local vim = vim
 
 local Plug = vim.fn['plug#']
-
+vim.opt.termguicolors = true
 vim.call('plug#begin', '~/.config/nvim/plugged')
 Plug('AlexvZyl/nordic.nvim', { branch= 'main' })
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
 vim.call('plug#end')
 
 require('lualine').setup {
@@ -53,4 +54,6 @@ require('lualine').setup {
 require('nvim-tree').setup{
 	update_cwd = true,
 }
+
+require'colorizer'.setup()
 
