@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dirs=("i3" "kitty" "nitrogen" "nvim" "picom" "polybar")
+dirs=("skhd" "yabai")
 
 for str in ${dirs[@]}; do
 	cp -r "$HOME/.config/$str" .
